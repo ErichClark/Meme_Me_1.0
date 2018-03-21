@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,114 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme_Me_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-xc-nMB" userLabel="imagePickerView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Iei-Dc-ApG" userLabel="imageSourceToolbar">
+                                <rect key="frame" x="1" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" style="plain" systemItem="camera" id="ChQ-IH-efx" userLabel="cameraButton">
+                                        <connections>
+                                            <action selector="requestImageFromCamera:" destination="BYZ-38-t0r" id="Ll5-L2-kOg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="zaZ-Of-t3x"/>
+                                    <barButtonItem image="collection" id="dSB-Un-usU" userLabel="galleryButton">
+                                        <connections>
+                                            <action selector="requestImageFromAlbums:" destination="BYZ-38-t0r" id="uxf-uK-ROs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-MW-TJP" userLabel="sharingToolbar">
+                                <rect key="frame" x="2" y="20" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Nw1-tU-AHJ" userLabel="shareButton">
+                                        <connections>
+                                            <action selector="requestShare" destination="BYZ-38-t0r" id="XaB-tY-K9x"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="cancel" id="xq7-8P-7SJ" userLabel="cancelButton"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="TOP" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Aqa-j0-Dil" userLabel="topMemeTextField">
+                                <rect key="frame" x="0.0" y="95" width="320" height="61"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TOP">
+                                        <attributes>
+                                            <font key="NSFont" size="50" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ruu-kE-qpo"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="BOTTOM" clearsOnBeginEditing="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-dT-skS" userLabel="bottomMemeTextField">
+                                <rect key="frame" x="0.0" y="344" width="320" height="61"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="BOTTOM">
+                                        <attributes>
+                                            <font key="NSFont" size="50" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nYj-q4-vth"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="1" id="Cd3-wD-mRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2fa-dT-skS" secondAttribute="bottom" constant="75" id="DQe-k9-igx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wX3-xc-nMB" secondAttribute="bottom" priority="750" id="Ewl-M4-9HU"/>
+                            <constraint firstItem="0fL-MW-TJP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="Hdh-Sp-2CY"/>
+                            <constraint firstItem="Aqa-j0-Dil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="K6C-zK-A7C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fa-dT-skS" secondAttribute="trailing" id="Ky1-A6-Yiv"/>
+                            <constraint firstItem="wX3-xc-nMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M66-2y-pLh"/>
+                            <constraint firstItem="Aqa-j0-Dil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N1b-6L-WYe"/>
+                            <constraint firstItem="wX3-xc-nMB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TKP-HL-C9z"/>
+                            <constraint firstItem="2fa-dT-skS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XHy-jp-Trr"/>
+                            <constraint firstItem="0fL-MW-TJP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="2" id="XRf-yM-yGS"/>
+                            <constraint firstItem="0fL-MW-TJP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aJ4-hc-SZ1"/>
+                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="dCb-5g-AdP"/>
+                            <constraint firstItem="wX3-xc-nMB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gIm-44-Hqj"/>
+                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="gJh-dj-eQS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqa-j0-Dil" secondAttribute="trailing" id="t0o-l7-c5N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomMemeTextField" destination="2fa-dT-skS" id="FO5-BF-kVK"/>
+                        <outlet property="cameraButton" destination="ChQ-IH-efx" id="ge6-rE-nhJ"/>
+                        <outlet property="cancelButton" destination="xq7-8P-7SJ" id="aqf-9F-xLp"/>
+                        <outlet property="galleryButton" destination="dSB-Un-usU" id="HaA-e5-kSG"/>
+                        <outlet property="imagePickerView" destination="wX3-xc-nMB" id="ZCl-zl-dEI"/>
+                        <outlet property="imageSourceToolbar" destination="Iei-Dc-ApG" id="Wrr-o1-o2E"/>
+                        <outlet property="shareButton" destination="Nw1-tU-AHJ" id="L9J-yo-ec4"/>
+                        <outlet property="sharingToolbar" destination="0fL-MW-TJP" id="dT4-lt-au3"/>
+                        <outlet property="topMemeTextField" destination="Aqa-j0-Dil" id="rzM-jP-0rE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection" width="30" height="30"/>
+    </resources>
 </document>

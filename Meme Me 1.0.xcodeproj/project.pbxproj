@@ -13,6 +13,7 @@
 		77F331A02060822900246F1D /* Meme_Me_1_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77F3319E2060822900246F1D /* Meme_Me_1_0.xcdatamodeld */; };
 		77F331A22060822900246F1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F331A12060822900246F1D /* Assets.xcassets */; };
 		77F331A52060822900246F1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F331A32060822900246F1D /* LaunchScreen.storyboard */; };
+		77F331B020608A1C00246F1D /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77F331AF20608A1C00246F1D /* impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		77F331A12060822900246F1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77F331A42060822900246F1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77F331A62060822900246F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77F331AF20608A1C00246F1D /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				77F331972060822900246F1D /* AppDelegate.swift */,
+				77F331AC206089D100246F1D /* Fonts */,
 				77F331992060822900246F1D /* ViewController.swift */,
 				77F3319B2060822900246F1D /* Main.storyboard */,
 				77F331A12060822900246F1D /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				77F3319E2060822900246F1D /* Meme_Me_1_0.xcdatamodeld */,
 			);
 			path = "Meme Me 1.0";
+			sourceTree = "<group>";
+		};
+		77F331AC206089D100246F1D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				77F331AF20608A1C00246F1D /* impact.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F331B020608A1C00246F1D /* impact.ttf in Resources */,
 				77F331A52060822900246F1D /* LaunchScreen.storyboard in Resources */,
 				77F331A22060822900246F1D /* Assets.xcassets in Resources */,
 				77F3319D2060822900246F1D /* Main.storyboard in Resources */,
