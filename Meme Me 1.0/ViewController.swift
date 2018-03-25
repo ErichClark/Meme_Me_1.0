@@ -136,6 +136,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return true
     }
     
+    func showToolbars(show: Bool) {
+        if show {
+            sharingToolbar.isHidden = false
+            imageSourceToolbar.isHidden = false
+        } else {
+            sharingToolbar.isHidden = true
+            imageSourceToolbar.isHidden = true
+        }
+        
+    }
+    
+    // MARK: Actions
     @IBAction func requestShare(_ sender: AnyObject) {
         if imagePickerView.image == nil {
             print("Image View is empty.")
@@ -163,8 +175,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: generateMeme
     func generateMeme() -> Meme {
         
-        imageSourceToolbar.isHidden = true
-        sharingToolbar.isHidden = true
+        showToolbars(show: false)
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.imagePickerView.frame.size)
@@ -172,8 +183,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        imageSourceToolbar.isHidden = false
-        sharingToolbar.isHidden = false
+        showToolbars(show: true)
         
         let meme = Meme(topText: topMemeTextField.text!, bottomText: bottomMemeTextField.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
         
