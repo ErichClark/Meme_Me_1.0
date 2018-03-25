@@ -53,6 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         subscribeToKeyboardNotifications()
     }
     
+    // MARK: resetTheWorld - resets the app to an initial state
     func resetTheWorld() {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         shareButton.isEnabled = false
@@ -149,15 +150,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("Image View is empty.")
         } else {
             let memedImage = generateMeme().memedImage!
-
-//            var nonOptionalMeme: [Any] = []
-//
-//            nonOptionalMeme.append(memedImage.topText)
-//            nonOptionalMeme.append(memedImage.bottomText)
-//            nonOptionalMeme.append(memedImage.originalImage)
-//            if let unwrappedMeme = memedImage.memedImage {
-//                nonOptionalMeme.append(unwrappedMeme)
-//            }
             
             let activityVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
@@ -169,7 +161,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-            
             self.present(activityVC, animated: true, completion: nil)
         }
     }
@@ -178,6 +169,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         resetTheWorld()
     }
     
+    // MARK: generateMeme
     func generateMeme() -> Meme {
         
         imageSourceToolbar.isHidden = true
