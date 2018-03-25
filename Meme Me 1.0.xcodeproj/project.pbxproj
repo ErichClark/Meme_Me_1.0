@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77D6B69220686286009F1046 /* Meme Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6B69120686286009F1046 /* Meme Model.swift */; };
 		77F331982060822900246F1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F331972060822900246F1D /* AppDelegate.swift */; };
 		77F3319A2060822900246F1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F331992060822900246F1D /* ViewController.swift */; };
 		77F3319D2060822900246F1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F3319B2060822900246F1D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77D6B69120686286009F1046 /* Meme Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meme Model.swift"; sourceTree = "<group>"; };
 		77F331942060822900246F1D /* Meme Me 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme Me 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F331972060822900246F1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F331992060822900246F1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				77F331AC206089D100246F1D /* Fonts */,
 				77F331992060822900246F1D /* ViewController.swift */,
 				77F3319B2060822900246F1D /* Main.storyboard */,
+				77D6B69120686286009F1046 /* Meme Model.swift */,
 				77F331A12060822900246F1D /* Assets.xcassets */,
 				77F331A32060822900246F1D /* LaunchScreen.storyboard */,
 				77F331A62060822900246F1D /* Info.plist */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D6B69220686286009F1046 /* Meme Model.swift in Sources */,
 				77F3319A2060822900246F1D /* ViewController.swift in Sources */,
 				77F331A02060822900246F1D /* Meme_Me_1_0.xcdatamodeld in Sources */,
 				77F331982060822900246F1D /* AppDelegate.swift in Sources */,

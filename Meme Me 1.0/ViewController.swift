@@ -23,14 +23,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageSourceToolbar: UIToolbar!
     @IBOutlet weak var sharingToolbar: UIToolbar!
     
-    struct Meme {
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memedImage: UIImage?
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
