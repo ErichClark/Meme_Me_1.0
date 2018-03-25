@@ -14,18 +14,18 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme_Me_1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-xc-nMB" userLabel="imagePickerView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iei-Dc-ApG" userLabel="imageSourceToolbar">
-                                <rect key="frame" x="1" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JUr-KU-BsE"/>
                                     <barButtonItem enabled="NO" style="plain" systemItem="camera" id="ChQ-IH-efx" userLabel="cameraButton">
@@ -73,7 +73,7 @@
                                 </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-MW-TJP" userLabel="sharingToolbar">
-                                <rect key="frame" x="2" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="action" id="Nw1-tU-AHJ" userLabel="shareButton">
                                         <connections>
@@ -91,20 +91,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="1" id="Cd3-wD-mRC"/>
+                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Cd3-wD-mRC"/>
+                            <constraint firstItem="wX3-xc-nMB" firstAttribute="bottom" secondItem="Iei-Dc-ApG" secondAttribute="top" id="Crw-Us-tXB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2fa-dT-skS" secondAttribute="bottom" constant="75" id="DQe-k9-igx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wX3-xc-nMB" secondAttribute="bottom" priority="750" id="Ewl-M4-9HU"/>
-                            <constraint firstItem="0fL-MW-TJP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="Hdh-Sp-2CY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iei-Dc-ApG" secondAttribute="top" priority="750" id="Ewl-M4-9HU"/>
+                            <constraint firstItem="0fL-MW-TJP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hdh-Sp-2CY"/>
                             <constraint firstItem="Aqa-j0-Dil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="K6C-zK-A7C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fa-dT-skS" secondAttribute="trailing" id="Ky1-A6-Yiv"/>
                             <constraint firstItem="wX3-xc-nMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M66-2y-pLh"/>
                             <constraint firstItem="Aqa-j0-Dil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N1b-6L-WYe"/>
                             <constraint firstItem="wX3-xc-nMB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TKP-HL-C9z"/>
                             <constraint firstItem="2fa-dT-skS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XHy-jp-Trr"/>
-                            <constraint firstItem="0fL-MW-TJP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="2" id="XRf-yM-yGS"/>
+                            <constraint firstItem="0fL-MW-TJP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XRf-yM-yGS"/>
                             <constraint firstItem="0fL-MW-TJP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aJ4-hc-SZ1"/>
-                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="dCb-5g-AdP"/>
-                            <constraint firstItem="wX3-xc-nMB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gIm-44-Hqj"/>
+                            <constraint firstItem="Iei-Dc-ApG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dCb-5g-AdP"/>
+                            <constraint firstItem="wX3-xc-nMB" firstAttribute="top" secondItem="0fL-MW-TJP" secondAttribute="bottom" id="gIm-44-Hqj"/>
                             <constraint firstItem="Iei-Dc-ApG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gJh-dj-eQS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqa-j0-Dil" secondAttribute="trailing" id="t0o-l7-c5N"/>
                         </constraints>
