@@ -26,15 +26,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.topMemeTextField.delegate = self
-        self.topMemeTextField.textColor = UIColor.white
-        topMemeTextField.defaultTextAttributes = memeTextAttributes
-        topMemeTextField.textAlignment = .center
-        
-        self.bottomMemeTextField.delegate = self
-        self.bottomMemeTextField.textColor = UIColor.white
-        bottomMemeTextField.defaultTextAttributes = memeTextAttributes
-        bottomMemeTextField.textAlignment = .center
+        setDefaultTextAttributes(textfield: self.topMemeTextField)
+        setDefaultTextAttributes(textfield: self.bottomMemeTextField)
         
         resetTheWorld()
     }
@@ -52,7 +45,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topMemeTextField.text = "TOP"
         bottomMemeTextField.text = "BOTTOM"
         imagePickerView.image = UIImage(named: "MemeGeneratorIcon-1024.png")
-        imagePickerView.contentMode = .scaleAspectFit
     }
     
     // MARK: ViewWill Dissapear
@@ -102,6 +94,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSAttributedStringKey.font.rawValue: UIFont(name: "impact", size: 55)!,
         NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
         NSAttributedStringKey.strokeWidth.rawValue: -6.0]
+    
+    func setDefaultTextAttributes(textfield: UITextField) {
+        textfield.delegate = self
+        textfield.textColor = UIColor.white
+        textfield.defaultTextAttributes = memeTextAttributes
+        textfield.textAlignment = .center
+    }
     
     // MARK: Keyboard show / hide / subscribe
     func subscribeToKeyboardNotifications() {
