@@ -63,29 +63,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         importImage(source: .camera)
     }
     
-    func importImage(source: UIImagePickerControllerSourceType) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = source
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
     func saveMeme() {
         let meme = generateMeme()
         UIImageWriteToSavedPhotosAlbum(meme.memedImage!, nil, nil, nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imagePickerView.image = image
-            shareButton.isEnabled = true
-        }
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Default meme text formatting
