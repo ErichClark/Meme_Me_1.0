@@ -57,7 +57,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ruu-kE-qpo"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="BOTTOM" clearsOnBeginEditing="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-dT-skS" userLabel="bottomMemeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="BOTTOM" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-dT-skS" userLabel="bottomMemeTextField">
                                 <rect key="frame" x="0.0" y="344" width="320" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment content="BOTTOM">
