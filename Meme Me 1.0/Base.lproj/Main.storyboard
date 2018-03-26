@@ -43,7 +43,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="TOP" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Aqa-j0-Dil" userLabel="topMemeTextField">
-                                <rect key="frame" x="0.0" y="95" width="320" height="61"/>
+                                <rect key="frame" x="0.0" y="85" width="320" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment content="TOP">
                                         <attributes>
@@ -96,7 +96,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2fa-dT-skS" secondAttribute="bottom" constant="75" id="DQe-k9-igx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iei-Dc-ApG" secondAttribute="top" priority="750" id="Ewl-M4-9HU"/>
                             <constraint firstItem="0fL-MW-TJP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hdh-Sp-2CY"/>
-                            <constraint firstItem="Aqa-j0-Dil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="K6C-zK-A7C"/>
+                            <constraint firstItem="Aqa-j0-Dil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="K6C-zK-A7C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fa-dT-skS" secondAttribute="trailing" id="Ky1-A6-Yiv"/>
                             <constraint firstItem="wX3-xc-nMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M66-2y-pLh"/>
                             <constraint firstItem="Aqa-j0-Dil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N1b-6L-WYe"/>
